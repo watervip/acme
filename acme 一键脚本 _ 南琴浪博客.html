@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>acme 一键脚本 | 南琴浪博客</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="基于原项目 https://github.com/Neilpang/acme.shacme.sh 是一款用于生成Let&amp;#39;s Encrypt证书的脚本本脚本将原项目的部署生成等命令进行集合releases: https://github.com/nanqinlang/acme/releases">
+<meta property="og:type" content="article">
+<meta property="og:title" content="acme 一键脚本">
+<meta property="og:url" content="https://www.nanqinlang.com/shell-acme.html">
+<meta property="og:site_name" content="南琴浪博客">
+<meta property="og:description" content="基于原项目 https://github.com/Neilpang/acme.shacme.sh 是一款用于生成Let&amp;#39;s Encrypt证书的脚本本脚本将原项目的部署生成等命令进行集合releases: https://github.com/nanqinlang/acme/releases">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2017-08-07T11:18:18.391Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="acme 一键脚本">
+<meta name="twitter:description" content="基于原项目 https://github.com/Neilpang/acme.shacme.sh 是一款用于生成Let&amp;#39;s Encrypt证书的脚本本脚本将原项目的部署生成等命令进行集合releases: https://github.com/nanqinlang/acme/releases">
+<link rel="icon" href="/favicon.ico">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<div id="container">
+<div id="wrap">
+<header id="header">
+<div id="banner"></div>
+<div id="header-outer" class="outer">
+<div id="header-inner" class="inner">
+<nav id="sub-nav">
+<a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+</nav>
+<div id="search-form-wrap">
+<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.nanqinlang.com"></form>
+</div>
+<nav id="main-nav">
+<a id="main-nav-toggle" class="nav-icon"></a>
+<a class="main-nav-link" href="/">首页</a>
+<a class="main-nav-link" href="/archives/index.html">归档</a>
+<a class="main-nav-link" href="/about.html">关于</a>
+<a class="main-nav-link" href="/atom.xml">RSS</a>
+</nav>
+</div>
+<div id="header-title" class="inner">
+<h1 id="logo-wrap">
+<a href="/" id="logo">南琴浪博客</a>
+</h1>
+<h2 id="subtitle-wrap">
+<a href="/" id="subtitle">虚拟主机技术基础</a>
+</h2>
+</div>
+</div>
+</header>
+<div class="outer">
+<section id="main"><article id="post-shell-acme" class="article article-type-post" itemscope itemprop="blogPost">
+<div class="article-meta">
+<a href="/shell-acme.html" class="article-date">
+<time datetime="2017-08-07T10:22:00.000Z" itemprop="datePublished">2017/08/07</time>
+</a>
+<div class="article-category">
+<a class="article-category-link" href="/categories/Shell脚本/">Shell脚本</a>
+</div>
+</div>
+<div class="article-inner">
+<header class="article-header">
+<h1 class="article-title" itemprop="name">
+acme 一键脚本
+</h1>
+</header>
+<div class="article-entry" itemprop="articleBody">
+
+<p>基于原项目 <a href="https://github.com/Neilpang/acme.sh" target="_blank" rel="external">https://github.com/Neilpang/acme.sh</a><br><code>acme.sh</code> 是一款用于生成<code>Let&#39;s Encrypt</code>证书的脚本<br>本脚本将原项目的部署生成等命令进行集合<br>releases: <a href="https://github.com/nanqinlang/acme/releases" target="_blank" rel="external">https://github.com/nanqinlang/acme/releases</a><br><a id="more"></a></p>
+<h2 id="运行过程中"><a href="#运行过程中" class="headerlink" title="运行过程中"></a>运行过程中</h2><hr>
+<ol>
+<li>输入域名</li>
+<li>输入要生成证书的类型 输入内容二选一 <code>rsa</code> 或 <code>ecc</code></li>
+<li>接下来会要求用 <code>dns</code> 方式验证域名所有权 添加脚本中绿色的对应 <code>TXT记录</code><br>添加完成后稍等下 按 <code>回车</code> 继续</li>
+<li>然后 SSL证书文件就会生成到 <code>/home/acme/crt</code><br><code>你的域名.key</code>&ensp;&nbsp;: 密钥<br><code>fullchain.cer</code> : 证书</li>
+</ol>
+<hr>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>原项目是包括 定时更新/api自动验证域名 等功能的，但我的脚本不打算加入这些<br>这年头小鸡一言不合就爆炸，60天一次手动其实也没什么<br>疑问欢迎留言</p>
+</div>
+<footer class="article-footer">
+<a data-url="https://www.nanqinlang.com/shell-acme.html" data-id="cj6c8k4s3000elcmh85jxaz4i" class="article-share-link">分享</a>
+</footer>
+</div>
+<nav id="article-nav">
+<a href="/nginx-with-tls1.3.html" id="article-nav-newer" class="article-nav-link-wrap">
+<strong class="article-nav-caption">上一篇</strong>
+<div class="article-nav-title">
+Nginx启用TLS1.3
+</div>
+</a>
+<a href="/nginx-with-https.html" id="article-nav-older" class="article-nav-link-wrap">
+<strong class="article-nav-caption">下一篇</strong>
+<div class="article-nav-title">Nginx启用HTTPS站点</div>
+</a>
+</nav>
+</article>
+<div class="comments" id="comments">
+<div id="gitment_comments"></div>
+</div>
+</section>
+<aside id="sidebar">
+<div class="widget-wrap">
+<div class="widget" id="toc-widget-fixed">
+<strong class="toc-title">文章目录</strong>
+<div class="toc-widget-list">
+<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#运行过程中"><span class="toc-number">1.</span> <span class="toc-text">运行过程中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-number">2.</span> <span class="toc-text">后记</span></a></li></ol>
+</div>
+</div>
+</div>
+</aside>
+</div>
+<footer id="footer">
+<div class="outer">
+<div id="footer-left">
+Copyright © 2017 <a href="https://www.nanqinlang.com">南琴浪博客</a> All Rights Reserved.</a>
+</div>
+<div id="footer-right">
+联系方式&nbsp;|&nbsp;<a class="__cf_email__" href="/cdn-cgi/l/email-protection" data-cfemail="9bfafff6f2f5f2e8efe9faeff2f4f5dbf5faf5eaf2f5f7faf5fcb5f8f4f6">[email&#160;protected]</a><script data-cfhash="f9e31" type="text/javascript">/* <![CDATA[ */!function(t,e,r,n,c,a,p){try{t=document.currentScript||function(){for(t=document.getElementsByTagName('script'),e=t.length;e--;)if(t[e].getAttribute('data-cfhash'))return t[e]}();if(t&&(c=t.previousSibling)){p=t.parentNode;if(a=c.getAttribute('data-cfemail')){for(e='',r='0x'+a.substr(0,2)|0,n=2;a.length-n;n+=2)e+='%'+('0'+('0x'+a.substr(n,2)^r).toString(16)).slice(-2);p.replaceChild(document.createTextNode(decodeURIComponent(e)),c)}p.removeChild(t)}}catch(u){}}()/* ]]> */</script>
+</div>
+</div>
+</footer>
+<script src="/jquery/jquery.min.js"></script>
+</div>
+<nav id="mobile-nav">
+<a href="/" class="mobile-nav-link">首页</a>
+<a href="/archives/index.html" class="mobile-nav-link">归档</a>
+<a href="/about.html" class="mobile-nav-link">关于</a>
+<a href="/atom.xml" class="mobile-nav-link">RSS</a>
+</nav>
+<img class="back-to-top-btn" src="/images/fly-to-top.png"/>
+<script>
+// Elevator script included on the page, already.
+window.onload = function() {
+  var elevator = new Elevator({
+    selector:'.back-to-top-btn',
+    element: document.querySelector('.back-to-top-btn'),
+    duration: 1000 // milliseconds
+  });
+}
+</script>
+
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    // id: '页面 ID', // 可选。默认为 location.href
+    owner: 'nanqinlang',
+    repo: 'www.nanqinlang.com',
+    oauth: {
+    client_id: '1e032ba7cc68e9776033',
+    client_secret: '61f074b0d3e90ebd351dc9182db97a640f8a4007',
+    }
+  })
+  gitment.render(document.getElementById("gitment_comments"))
+</script>
+
+
+<script src="/js/is.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script src="/js/script.js"></script>
+<script src="/js/elevator.js"></script>
+</div>
+</body>
+</html>
